@@ -135,11 +135,11 @@ body {
 }
 
 
-.image__overlay:hover {
+.image__overlay:hover, .image_overlay:active {
   opacity:1;
 }
 
-.image__overlay:hover > * {
+.image__overlay:hover, .image_overlay:active > * {
   transform: translateY(0);
 }
 
