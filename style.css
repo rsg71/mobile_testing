@@ -112,36 +112,7 @@ body {
 
 }
 
-.image__overlay{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-  color:white;
-  display: flex;
-  font-family: 'Open Sans', sans-serif;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity:0;
-  transition: opacity 0.3s;
-}
 
-.image__overlay > * {
-  transform: translateY(15px);
-  transition: transform 0.3s;
-}
-
-
-.image__overlay:hover, .image_overlay:active {
-  opacity:1;
-}
-
-.image__overlay:hover, .image_overlay:active > * {
-  transform: translateY(0);
-}
 
 
 
@@ -293,14 +264,80 @@ img {
       font-size:10px;
   }
 
-
   #resumeContainer {
       width: 100%;
       max-width: 100% !important;
   }
 
-/* 
-  .contact {
-      width:80%;
-  } */
 }
+
+
+
+@media (hover: hover) {
+    .image__overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.6);
+        color:white;
+        display: flex;
+        font-family: 'Open Sans', sans-serif;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity:0;
+        transition: opacity 0.3s;
+      }
+      
+      .image__overlay > * {
+        transform: translateY(15px);
+        transition: transform 0.3s;
+      }
+      
+      
+      .image__overlay:hover {
+        opacity:1;
+      }
+      
+      .image__overlay:hover > * {
+        transform: translateY(0);
+      }
+}
+
+
+@media (hover: none) {
+   
+    .image__overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.6);
+        color:white;
+        display: flex;
+        font-family: 'Open Sans', sans-serif;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity:0;
+        transition: opacity 0.3s;
+      }
+      
+      .image__overlay > * {
+        transform: translateY(15px);
+        transition: transform 0.3s;
+      }
+      
+      
+      .image__overlay:active {
+        opacity:1;
+      }
+      
+      .image__overlay:active > * {
+        transform: translateY(0);
+      }
+}
+
